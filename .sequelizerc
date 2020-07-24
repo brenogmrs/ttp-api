@@ -1,0 +1,9 @@
+const path = require('path');
+const database = require('./src/config/database');
+
+module.exports = {
+    //dizendo para o sequelize-cli onde estarão as configs para a instancia do mesmo se comunicar com o banco de dados
+    config: path.resolve(__dirname, 'src', 'config', 'database.js'),
+    //dizendo para o sequelize-cli onde os arquivos de migration devem ser criados e lidos
+    'migrations-path': path.resolve(__dirname, 'src', 'database', 'migrations')
+}

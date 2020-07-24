@@ -1,9 +1,7 @@
 const express = require('express');
+const CarController = require('./app/controllers/CarController');
 
 const router = express.Router();
 
-router.get('/hello', (request, response) => {
-    return response.json({hello: 'World'})
-});
-
+router.post('/cars', CarController.store)
 module.exports = router;
