@@ -6,6 +6,9 @@ CarController = new CarController();
 let DriverController = require('./app/controllers/DriverController');
 DriverController = new DriverController();
 
+let CarUseController = require('./app/controllers/CarUseController');
+CarUseController = new CarUseController();
+
 const router = express.Router();
 
 router.post('/cars', CarController.store);
@@ -21,6 +24,12 @@ router.delete('/drivers/:id', DriverController.destroy);
 router.get('/drivers/?nome=:nome', DriverController.all);
 router.get('/drivers/:id', DriverController.one);
 router.get('/drivers', DriverController.all);
+
+router.post('/car_use/start', CarUseController.startCarUsage);
+router.post('/car_use/finish', CarUseController.finishCarUsage);
+router.get('/car_use', CarUseController.listCarUsage);
+
+
 
 
 module.exports = router;

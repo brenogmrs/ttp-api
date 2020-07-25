@@ -11,6 +11,10 @@ class Driver extends Model {
         });
     }
 
+    static associate(models){
+        this.hasOne(models.CarUse, { foreignKey: 'driver_id', as: 'drivers' });
+    }
+
 }
 
 module.exports = Driver;

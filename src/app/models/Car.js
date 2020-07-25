@@ -13,6 +13,10 @@ class Car extends Model {
         });
     }
 
+    static associate(models){
+        this.hasOne(models.CarUse, { foreignKey: 'car_id', as: 'cars' });
+    }
+
 }
 
 module.exports = Car;
