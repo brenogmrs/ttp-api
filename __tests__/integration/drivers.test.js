@@ -40,22 +40,25 @@ describe('car crud', () =>{
     });
 
     //get com filtro
-    it('Deve buscar e filtrar a listagem dos motoristas por nome.', async ()=> {
-        
-        const response = await request(app)
-            .get('/drivers/?nome=breno');
+    it('Deve buscar e filtrar a listagem dos motoristas por nome.', 
+        async ()=> {
+            const response = await request(app)
+                .get('/drivers/?nome=breno');
 
-        expect(response.status).toBe(200)
-    });
+            expect(response.status).toBe(200)
+        }
+    );
     
 
-    it('Recuperar um motorista cadastrado pelo seu identificador único', async ()=> {
-        
-        const response = await request(app)
-            .get('/drivers/1');
+    it('Recuperar um motorista cadastrado pelo seu identificador único', 
+        async ()=> {
+            
+            const response = await request(app)
+                .get('/drivers/1');
 
-        expect(response.status).toBe(200)
-    });
+            expect(response.status).toBe(200)
+        }
+    );
     
 
     it('Listar os motoristas cadastrados.', async ()=> {

@@ -44,22 +44,25 @@ describe('car crud', () =>{
     });
 
     //get com filtro
-    it('Deve Listar os automóveis cadastrados. Deve ser possível filtrar a listagem dos automóveis por cor e marca.', async ()=> {
-        
-        const response = await request(app)
-            .get('/cars/?marca=volvo&cor=preto');
+    it('Deve Listar os automóveis cadastrados. Deve ser possível filtrar a listagem dos automóveis por cor e marca.', 
+        async ()=> {
+            
+            const response = await request(app)
+                .get('/cars/?marca=volvo&cor=preto');
 
-        expect(response.status).toBe(200)
-    });
+            expect(response.status).toBe(200)
+        }
+    );
     
 
-    it('Deve Recuperar um automóvel cadastrado pelo seu identificador único', async ()=> {
-        
-        const response = await request(app)
-            .get('/cars/1');
+    it('Deve Recuperar um automóvel cadastrado pelo seu identificador único', 
+        async ()=> {
+            const response = await request(app)
+                .get('/cars/1');
 
-        expect(response.status).toBe(200)
-    });
+            expect(response.status).toBe(200)
+        }
+    );
     
 
     it('Deve Listar os automóveis cadastrados.', async ()=> {

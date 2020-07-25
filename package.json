@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/jest": "^26.0.7",
     "consign": "^0.1.6",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
