@@ -1,6 +1,13 @@
 # Passos para rodar o projeto:
 
-1. Execute `npm i` para baixar as dependências do projeto
+Desenvolvido em:
+-Nodejs
+-Expressjs
+-Sequelize
+-Postgres
+-Jest
+
+1. Execute `npm install` para baixar as dependências do projeto
 
 # Sequelize:
 
