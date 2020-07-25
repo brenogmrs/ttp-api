@@ -12,7 +12,10 @@ Car.init(connection);
 Driver.init(connection);
 CarUse.init(connection);
 
+Car.associate(connection.models);
+Driver.associate(connection.models);
 CarUse.associate(connection.models);
+
 
 
 module.exports = connection;
