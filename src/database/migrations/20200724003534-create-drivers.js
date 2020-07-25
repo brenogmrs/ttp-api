@@ -1,19 +1,19 @@
 'use strict';
 
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('drivers', {
+	up: async (queryInterface, Sequelize) => {
+		await queryInterface.createTable('drivers', {
 			id: {
 				type: Sequelize.INTEGER,
 				primaryKey: true,
 				autoIncrement: true,
 				allowNull: false
-      },
-      nome:{
+			},
+			nome:{
 				type: Sequelize.STRING,
 				allowNull: false
-      },
-      created_at: {
+			},
+			created_at: {
 				type: Sequelize.DATE,
 				allowNull: false
 			},
@@ -21,11 +21,11 @@ module.exports = {
 				type: Sequelize.DATE,
 				allowNull: false
 			}, 
-    });
-  },
+		});
+	},
 
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('drivers');
+	down: async (queryInterface, Sequelize) => {
+		await queryInterface.dropTable('drivers');
 
-  }
+	}
 };
