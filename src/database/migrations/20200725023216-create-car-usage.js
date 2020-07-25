@@ -29,7 +29,7 @@ module.exports = {
             },
             fim_uso:{
 				type: Sequelize.DATE,
-				allowNull: false,
+				allowNull: true,
 			},
 			motivo:{
 				type: Sequelize.STRING,
