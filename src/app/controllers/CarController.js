@@ -6,7 +6,17 @@ class CarController{
     async store(request, response){
         const { cor, marca, placa } = request.body;
 
-        const car = await Car.create({ cor, marca, placa });
+        let car = await Car.findOne({ where: { placa } });
+        
+        if(car){
+            return response.json({
+                message: "O veículo que você está tentando cadastrar já existe",
+                status: 200,
+                data: null
+            })
+        }
+
+        car = await Car.create({ cor, marca, placa });
 
         return response.json({
             message: "Registro de veículo criado com sucesso",
