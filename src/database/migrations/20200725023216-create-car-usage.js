@@ -31,6 +31,10 @@ module.exports = {
 				type: Sequelize.DATE,
 				allowNull: false,
 			},
+			motivo:{
+				type: Sequelize.STRING,
+				allowNull: false,
+			},
 			created_at: {
 				type: Sequelize.DATE,
 				allowNull: false
