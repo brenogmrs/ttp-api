@@ -6,7 +6,7 @@ Execute `npm install` para baixar as dependências do projeto
 
 # Sequelize:
 
-Antes de executar os comandos abaixo é importante checar a arquivo .env. Pois nele estão as credenciais para a conexão com o banco de dados.
+Antes de executar os comandos abaixo é importante checar a arquivo .env. Pois nele estão as credenciais para a conexão com o banco de dados. Feito isso você pode prosseguir para:
 
 1. Para criar o banco de dados `npx ou yarn sequelize db:create`
 2. Para criar tabelas `npx ou yarn sequelize db:migrate`
