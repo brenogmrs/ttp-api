@@ -2,17 +2,19 @@
 
 Desenvolvido usando: Nodejs, Expressjs, Sequelize, Postgres, Jest.
 
-1. Execute `npm install` para baixar as dependências do projeto
+Execute `npm install` para baixar as dependências do projeto
 
 # Sequelize:
+
+Antes de executar os comandos abaixo é importante checar a arquivo .env. Pois nele estão as credenciais para a conexão com o banco de dados.
 
 1. Para criar o banco de dados `npx ou yarn sequelize db:create`
 2. Para criar tabelas `npx ou yarn sequelize db:migrate`
 
 # Rodar projeto:
 
-1. Para rodar projeto `npm run start`
+Para rodar projeto `npm run start` ou `yarn start`
 
 # Rodar testes do projeto:
 
-1. Para rodar projeto `npm run test`
+Para rodar projeto `npm run test` ou `yarn test`
